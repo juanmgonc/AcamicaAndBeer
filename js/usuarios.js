@@ -1,23 +1,39 @@
-var Usuarios={
-    amigos : [],
-    tickets: [],
-    generarId: function() {
+var Usuarios=(function(){
+  var amigos=[]
+  var tickets=[]
+   
+  function  generarId () {
             if (window.unique) {
               window.unique = window.unique + 1;
             } else {
               window.unique = 1;
             }
-    },
-    crearUsuarios: function() {
+    }
+   function crearUsuarios () {
             nombre= prompt ("¿ Quien sos ?");
             id= generarId ();
             miGasto= 0;
             balance= 0;
             amigos.push (nombre);
-            ingresarTicket: function(){
+   
+    }
+
+return {
+  model:{
+    tickets,
+    amigos
+  },
+
+  controller:{
+    crearUsuarios,
+  }
+}
+
+})()      
+
+
+/* function ingresarTicket: (){
             }
             gasto= prompt ("¿ Que compraste ?");
             //COMPLETAR
-            ticket.push(gasto);
-    }
-}            
+            ticket.push(gasto);*/
