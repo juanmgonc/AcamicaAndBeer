@@ -1,5 +1,19 @@
-/*
-*Este es nuestro archivo
-*/
+var tiketera = (function () {
+    
+    function crearTicket(importe,concepto){
+        return{
+            id: generarId(),
+            concepto: concepto,
+            importe: importe
+            }
+    }; 
 
-var ticket;
+    return {
+        model: {
+            
+        },
+        controller: {
+            crearTicket,
+        },
+    }
+})();
